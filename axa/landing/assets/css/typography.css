@@ -1,0 +1,78 @@
+.heading-1 {
+  font-family: "Georgia", BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 62px;
+}
+
+.heading-2 {
+  font-family: "Georgia", BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+}
+
+.heading-3 {
+  font-family: "Georgia", BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.heading-4 {
+  font-family: "Georgia", BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+.heading-5 {
+  font-family: "Georgia", BlinkMacSystemFont, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.bodyXLarge {
+  font-weight: 700;
+  font-size: 28px;
+}
+.bodyLarge {
+  font-weight: 700;
+  font-size: 24px;
+}
+.bodyMedium {
+  font-family: "Source Sans Pro", BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 33px;
+  letter-spacing: 0.3px;
+}
+.bodySmall {
+  font-family: "Source Sans Pro", BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.3px;
+}
+.bodyXSmall {
+  font-family: "Source Sans Pro", BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+}
+.bodyXXSmall {
+  font-family: "Source Sans Pro", BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.3px;
+}
+
+.font-source-sans-pro {
+  font-family: "Source Sans Pro", BlinkMacSystemFont, sans-serif;
+}
+.georgia {
+  font-family: "Georgia", BlinkMacSystemFont, sans-serif;
+}

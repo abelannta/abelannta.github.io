@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+
+  <link rel="stylesheet" href="assets/css/index.css">
+
+
+</head>
+
+<body>
+  <nav class="navigation">
+    <div class="navigation__logo">
+      <a class="link" href="https://www.stiftung-praevention.ch/it">
+        <img class="img" src="assets/img/app-logo.png" />
+      </a>
+    </div>
+
+    <div class="navigation__right">
+      <ul class="list">
+        <li class="list__item item">
+          <a href="https://www.stiftung-praevention.ch/it/über-die-stfitung" class="item__link">INFORMAZIONI SULLA FONDAZIONE</a>
+        </li>
+        <li class="list__item item">
+          <a href="https://www.stiftung-praevention.ch/it/forschungsfoerderung" class="item__link">PROMOZIONE DELLA RICERCA</a>
+        </li>
+        <li class="list__item item">
+          <a href="https://www.stiftung-praevention.ch/it/max-der-dachs" class="item__link">MAX IL TASSO</a>
+        </li>
+        <li class="list__item item">
+          <a href="https://stiftung-praevention.ch/it/shop" class="item__link">SHOP</a>
+        </li>
+      </ul>
+
+      <div class="dropdown-language-switcher" id="dropboxLanguageSwitcher">
+        <select class="select-box">
+          <option></option>
+          <option value="deutsch">TEDESCO</option>
+          <option value="francais">FRANCESE</option>
+          <option value="italiano">ITALIANO</option>
+        </select>
+
+        <div class="selection-container">
+          <span class="text" id="selected_title">it</span>
+          <svg class="arrow-icon" width="12" height="5" viewBox="0 0 12 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 5L0.803848 0.5L11.1962 0.5L6 5Z" fill="white" />
+          </svg>
+        </div>
+
+        <ul class="list-items">
+          <li data-index="de" data-value="deutsch">
+            <a href="/axa/landing">TEDESCO</a>
+          </li>
+          <li data-index="fr" data-value="francais">
+            <a href="/axa/landing/fr">FRANCAIS</a>
+          </li>
+          <li class="active" data-index="it" data-value="italiano">
+            <a href="/axa/landing/it">ITALIANO</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <button id="hamburgerButton" onclick="" class="button__hamburger">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 12H21M3 6H21M3 18H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </button>
+
+    <div id="navigationDrawerBackground" class="navigation__drawer navigation__drawer--background">
+      <div id="navigationDrawerContainer" class="navigation__drawer--container">
+        <div class="navigation__drawer--header">
+          <div class="navigation__logo">
+            <a class="link" href="https://www.stiftung-praevention.ch/it">
+              <img class="img" src="assets/img/app-logo.png" />
+            </a>
+          </div>
+          <button id="btnCloseNavigationDrawer" class="navigation__drawer--btn-close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18M6 6L18 18" stroke="#282828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="navigation__drawer--content-container">
+          <div class="navigation__drawer--menu-container">
+            <ul class="menu-container--group">
+              <li class="menu-container--list">
+                <a href="https://www.stiftung-praevention.ch/it/über-die-stfitung" class="menu-container--link">INFORMAZIONI SULLA FONDAZIONE</a>
+              </li>
+              <li class="menu-container--list">
+                <a href="https://www.stiftung-praevention.ch/it/forschungsfoerderung" class="menu-container--link">PROMOZIONE DELLA RICERCA</a>
+              </li>
+              <li class="menu-container--list">
+                <a href="https://www.stiftung-praevention.ch/it/max-der-dachs" class="menu-container--link">MAX IL TASSO</a>
+              </li>
+              <li class="menu-container--list">
+                <a href="https://stiftung-praevention.ch/it/shop" class="menu-container--link">SHOP</a>
+              </li>
+            </ul>
+
+            <div class="dropdown-language-switcher" id="dropboxLanguageSwitcherNav">
+              <select class="select-box">
+                <option></option>
+                <option value="deutsch">TEDESCO</option>
+                <option value="francais">FRANCESE</option>
+                <option value="italiano">ITALIANO</option>
+              </select>
+
+              <div class="selection-container">
+                <span class="text" id="selected_title-nav">it</span>
+                <svg class="arrow-icon" width="12" height="5" viewBox="0 0 12 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 4.5L0.803848 0L11.1962 0L6 4.5Z" fill="#282828" />
+                </svg>
+              </div>
+
+              <ul class="list-items">
+                <li data-index="de" data-value="deutsch">
+                  <a href="/">TEDESCO</a>
+                </li>
+                <li data-index="fr" data-value="francais">
+                  <a href="/fr">FRANCESE</a>
+                </li>
+                <li class="active" data-index="it" data-value="italiano">
+                  <a href="/it">ITALIANO</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </nav>
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero__content content">
+        <div class="content__inner-container">
+          <h1 class="content__title">Vivere la strada con gli occhi dei bambini</h1>
+          <p class="content__description">Immergetevi in un mondo interattivo basato sulla realtà aumentata (AR) e, insieme a Max il tasso, scoprite la strada vista dai più piccoli.</p>
+          <button class="button__start-now">
+            <p class="text">Avvia ora</p>
+          </button>
+
+          <div class="content__qr-code">
+            <img class="qr-code__ornament" src="assets/img/arrow-ornament.png" />
+            <img class="qr-code__img" src="assets/img/qr-code.png" />
+            <p class="qr-code__text">Scansionare con lo smartphone</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__img-container">
+        <div class="hero__img-inner">
+          <img class="hero__img" src="assets/img/hero-image.png" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Section How It Works -->
+    <section class="how-its-works">
+      <h2 class="title">Ecco come funziona</h2>
+
+      <!-- Top Line -->
+      <div id="top-line">
+        <!-- Bullet Icon -->
+        <svg class="bullet-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.666667 6C0.666667 8.94552 3.05448 11.3333 6 11.3333C8.94552 11.3333 11.3333 8.94552 11.3333 6C11.3333 3.05448 8.94552 0.666667 6 0.666667C3.05448 0.666667 0.666667 3.05448 0.666667 6ZM5.54545 5.45455H5.5V7.45455H5.54545V5.45455ZM4 6.95455V7H6V6.95455H4ZM5.5 5.45455C4.67157 5.45455 4 6.12612 4 6.95455H6C6 7.23069 5.77614 7.45455 5.5 7.45455V5.45455ZM5 6C5 5.69875 5.24421 5.45455 5.54545 5.45455V7.45455C6.34878 7.45455 7 6.80332 7 6H5Z" fill="#D9D9D9"/>
+        </svg>
+          
+        <!-- <svg id="top-line" width="532" height="112" viewBox="0 0 532 112" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M531 0V34.9091C531 43.7456 523.837 50.9091 515 50.9091H17C8.16344 50.9091 1 58.0725 1 66.9091V112" stroke="#D9D9D9" stroke-width="2"/>
+        </svg> -->
+        
+        <!-- Large -->
+        <svg class="line-large" width="532" height="112" viewBox="0 0 532 112" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M531 0V34.9091C531 43.7456 523.837 50.9091 515 50.9091H17C8.16344 50.9091 1 58.0725 1 66.9091V112" stroke="#D9D9D9" stroke-width="2"/>
+        </svg>
+
+        <!-- Medium -->
+        <svg class="line-medium" width="429" height="121" viewBox="0 0 429 121" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M428 0V34.9091C428 43.7456 420.837 50.9091 412 50.9091H17C8.16343 50.9091 1 58.0725 1 66.9091V120.5" stroke="#D9D9D9" stroke-width="2"/>
+        </svg>
+
+        <!-- Small -->
+        <svg class="line-small" width="145" height="104" viewBox="0 0 145 104" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M144 0V20.5003C144 24.9186 140.418 28.5003 136 28.5003H9C4.58173 28.5003 1 32.0591 1 36.4774C1 52.2391 1 87.2902 1 104" stroke="#D9D9D9" stroke-width="2"/>
+        </svg>
+          
+          
+
+        <!-- Arrow Down -->
+        <svg class="arrow-down" width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 10L11.7735 0H0.226497L6 10ZM6 0V4.04545H8V0H6ZM6.5 3.54545C5.67157 3.54545 5 4.21703 5 5.04545H7C7 5.3216 6.77614 5.54545 6.5 5.54545V3.54545ZM6 4.04545C6 3.76931 6.22386 3.54545 6.5 3.54545V5.54545C7.32843 5.54545 8 4.87388 8 4.04545H6Z" fill="#D9D9D9"/>
+        </svg>
+      </div>
+
+      <div class="how-it-works__group">
+        <article class="how-its-works__item">
+          <div class="sequence-number">
+            <p class="sequence-number__text">1</p>
+          </div>
+          <div>
+            <h3 class="title-item">Avviare l’app AR experience</h3>
+            <p class="description-item">Scansionate il codice QR con il vostro cellulare e aprite il link. Per avviare l’app AR experience cliccate sul pulsante «Start».</p>
+          </div>
+        </article>
+
+        <!-- First Line -->
+        <div id="first-line">
+          <!-- Bullet Icon -->
+          <svg class="bullet-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.666667 6C0.666667 8.94552 3.05448 11.3333 6 11.3333C8.94552 11.3333 11.3333 8.94552 11.3333 6C11.3333 3.05448 8.94552 0.666667 6 0.666667C3.05448 0.666667 0.666667 3.05448 0.666667 6ZM5.54545 5.45455H5.5V7.45455H5.54545V5.45455ZM4 6.95455V7H6V6.95455H4ZM5.5 5.45455C4.67157 5.45455 4 6.12612 4 6.95455H6C6 7.23069 5.77614 7.45455 5.5 7.45455V5.45455ZM5 6C5 5.69875 5.24421 5.45455 5.54545 5.45455V7.45455C6.34878 7.45455 7 6.80332 7 6H5Z" fill="#D9D9D9"/>
+          </svg>
+            
+          <!-- <svg id="first-line" width="12" height="108" viewBox="0 0 12 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 0.666667C3.05448 0.666666 0.666667 3.05448 0.666667 6C0.666666 8.94552 3.05448 11.3333 6 11.3333C8.94552 11.3333 11.3333 8.94552 11.3333 6C11.3333 3.05448 8.94552 0.666667 6 0.666667ZM6 108L11.7735 98L0.226493 98L6 108ZM5 6L5 99L7 99L7 6L5 6Z" fill="#D9D9D9"/>
+          </svg> -->
+            
+          <svg class="line" width="2" viewBox="0 0 2 102" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path d="M1 0L0.999996 102" stroke="#D9D9D9" stroke-width="2"/>
+          </svg>
+
+          <!-- Arrow Down -->
+          <svg class="arrow-down" width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 10L11.7735 0H0.226497L6 10ZM6 0V4.04545H8V0H6ZM6.5 3.54545C5.67157 3.54545 5 4.21703 5 5.04545H7C7 5.3216 6.77614 5.54545 6.5 5.54545V3.54545ZM6 4.04545C6 3.76931 6.22386 3.54545 6.5 3.54545V5.54545C7.32843 5.54545 8 4.87388 8 4.04545H6Z" fill="#D9D9D9"/>
+          </svg>
+        </div>
+
+        <article class="how-its-works__item">
+          <div class="sequence-number">
+            <p class="sequence-number__text">2</p>
+          </div>
+          <div>
+            <h3 class="title-item">Scansionare l’ambiente</h3>
+            <p class="description-item">Per scansionare l’ambiente con la fotocamera dello smartphone seguite le istruzioni sul vostro apparecchio. In questo modo saranno posizionate delle strisce pedonali virtuali vicino alle quali vi aspetta Max il tasso.</p>
+          </div>
+        </article>
+
+        <!-- Second Line -->
+        <div id="second-line">
+          <!-- Bullet Icon -->
+          <svg class="bullet-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.666667 6C0.666667 8.94552 3.05448 11.3333 6 11.3333C8.94552 11.3333 11.3333 8.94552 11.3333 6C11.3333 3.05448 8.94552 0.666667 6 0.666667C3.05448 0.666667 0.666667 3.05448 0.666667 6ZM5.54545 5.45455H5.5V7.45455H5.54545V5.45455ZM4 6.95455V7H6V6.95455H4ZM5.5 5.45455C4.67157 5.45455 4 6.12612 4 6.95455H6C6 7.23069 5.77614 7.45455 5.5 7.45455V5.45455ZM5 6C5 5.69875 5.24421 5.45455 5.54545 5.45455V7.45455C6.34878 7.45455 7 6.80332 7 6H5Z" fill="#D9D9D9"/>
+          </svg>
+            
+          <!-- <svg id="second-line" width="2" height="102" viewBox="0 0 2 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 0L0.999996 102" stroke="#D9D9D9" stroke-width="2"/>
+          </svg> -->
+            
+          <svg class="line" width="2" viewBox="0 0 2 102" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path d="M1 0L0.999996 102" stroke="#D9D9D9" stroke-width="2"/>
+          </svg>
+
+          <!-- Arrow Down -->
+          <svg class="arrow-down" width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 10L11.7735 0H0.226497L6 10ZM6 0V4.04545H8V0H6ZM6.5 3.54545C5.67157 3.54545 5 4.21703 5 5.04545H7C7 5.3216 6.77614 5.54545 6.5 5.54545V3.54545ZM6 4.04545C6 3.76931 6.22386 3.54545 6.5 3.54545V5.54545C7.32843 5.54545 8 4.87388 8 4.04545H6Z" fill="#D9D9D9"/>
+          </svg>
+        </div>
+
+        <article class="how-its-works__item">
+          <div class="sequence-number">
+            <p class="sequence-number__text">3</p>
+          </div>
+          <div>
+            <h3 class="title-item">Immergetevi e sperimentate</h3>
+            <p class="description-item">Non appena appaiono le strisce pedonali, l’app si avvia automaticamente. Ora vi trovate in un mondo virtuale dove potete vivere in prima persona i pericoli della strada.</p>
+          </div>
+        </article>
+      </div>
+
+      <button class="button__start-now">
+        <p class="text">Avvia ora</p>
+      </button>
+
+    </section>
+
+    <!-- Section Notes -->
+    <section class="notes">
+      <div class="notes__container">
+        <h2 class="notes__title">Vi ricordiamo che</h2>
+
+        <div class="notes__group">
+          <div class="notes__list">
+            <img src="assets/img/camera-icon.svg" class="list__icon" />
+            <!-- <object type="image/svg+xml" data="assets/img/camera-icon.svg" class="list__icon">
+              Camera Icon
+            </object> -->
+            <p class="list__text">La fotocamera deve essere attivata per l’utilizzo dell’AR experience.</p>
+          </div>
+          <div class="notes__list">
+            <object type="image/svg+xml" data="assets/img/phone-icon.svg" class="list__icon">
+              Phone Icon <!-- fallback image in CSS -->
+            </object>
+            <p class="list__text">Questa app è ottimizzata per dispositivi mobili e richiede un apparecchio compatibile.</p>
+          </div>
+          <div class="notes__list">
+            <object type="image/svg+xml" data="assets/img/alert-icon.svg" class="list__icon">
+              Alert Icon <!-- fallback image in CSS -->
+            </object>
+            <p class="list__text">Mentre la app è attiva, prestate attenzione all’ambiente circostante e cercate di evitarne i possibili pericoli.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Our Mission -->
+    <section class="our-mission">
+      <div class="our-mission__container">
+        <div class="our-mission__header">
+          <h2 class="our-mission__title">La nostra missione</h2>
+          <p class="our-mission__description">Noi di AXA ci impegniamo per la sicurezza di tutta l’utenza della strada. Attraverso la nostra AR experience desideriamo sensibilizzare gli adulti e dare loro la possibilità di vivere in prima persona le sfide del traffico stradale dalla prospettiva dei più piccoli. L’obiettivo di questa esperienza è creare una comprensione reciproca e, in tal modo, rendere più sicuro il tragitto casa-scuola per i bambini.</p>
+        </div>
+
+        <div class="video__inner js-yt-video" bis_skin_checked="1">
+          <div id="js-video-click-area" class="video__poster-img" style="background-image: url(https://img.youtube.com/vi/dyYs7eFW9jo/maxresdefault.jpg)" bis_skin_checked="1">
+            <div class="video__play-icon" bis_skin_checked="1">
+              <svg viewBox="0 0 141 141" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <rect x="0.320312" y="0.669922" width="140" height="140" rx="70" fill="white" fill-opacity="0.5" />
+                <rect x="19.9199" y="20.2598" width="100.8" height="100.8" rx="50.4" fill="white" />
+                <g clip-path="url(#clip0_202_85)">
+                  <path d="M58.3203 59.6744C58.3203 57.3632 60.8233 55.9201 62.8233 57.0783L81.6003 67.952C83.5953 69.1076 83.5953 71.9886 81.6003 73.1442L62.8233 84.0179C60.8233 85.1761 58.3203 83.733 58.3203 81.4218V59.6744Z" fill="black" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_202_85">
+                    <rect width="30" height="30" fill="white" transform="translate(55.3203 55.6699)" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+          </div>
+          <iframe id="js-video-iframe" class="video__iframe" data-video-id="dyYs7eFW9jo" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="Interview mit Michael Pfäffli - Stiftungsratspräsident der Stiftung für Prävention" width="100%" height="100%" src="https://www.youtube.com/embed/dyYs7eFW9jo?rel=0&amp;showinfo=0&amp;enablejsapi=1&amp;widgetid=1" id="widget2" data-gtm-yt-inspected-11978972_14="true"></iframe>
+        </div>
+
+        <p class="our-mission__caption">Michael Pfäffli parla dei compiti, delle sfide e degli obiettivi della Foundation for Prevention</p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="app__logo">
+        <a class="link" href="https://www.stiftung-praevention.ch/it/">
+          <img class="img" src="assets/img/app-logo.png" />
+        </a>
+      </div>
+
+      <div class="footer__navigation">
+        <ul class="footer__link-group">
+          <li class="footer__link-item">
+            <a href="https://www.stiftung-praevention.ch/it/schulweg-app" class="footer__anchor">La preparazione ottimale per il primo tragitto casa-scuola</a>
+          </li>
+          <li class="footer__link-item">
+            <a href="https://www.stiftung-praevention.ch/it/über-die-stfitung" class="footer__anchor">Mobilità urbana sicura</a>
+          </li>
+          <li class="footer__link-item">
+            <a href="https://stiftung-praevention.ch/it/shop" class="footer__anchor">Shop</a>
+          </li>
+        </ul>
+
+        <ul class="footer__link-group">
+          <li class="footer__link-item">
+            <a href="https://www.stiftung-praevention.ch/it/allgemeine-geschäftsbedingungen" class="footer__anchor">CG</a>
+          </li>
+          <li class="footer__link-item">
+            <a href="https://axa.ch/content/axa/it/informationen/datenschutz.html#new_tab" class="footer__anchor">Protezione dei dati</a>
+          </li>
+          <li class="footer__link-item">
+            <a href="https://www.stiftung-praevention.ch/it/kontakt" class="footer__anchor">Contatto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+  <script src="assets/js/index.js"></script>
+</body>
+
+</html>
