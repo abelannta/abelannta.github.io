@@ -1,4 +1,6 @@
-async () => {
+console.log("tes");
+
+const fetchData = async () => {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const jobId = urlParams.get("id");
@@ -89,6 +91,8 @@ async () => {
     ? moment(job.published_end_date).format("LL")
     : "-";
 };
+
+fetchData();
 
 // Apply Job Function
 const queryString = window.location.search;
