@@ -194,7 +194,6 @@ var createItem = (job, jobDescription, templateElement) => {
 };
 
 const collectJobType = (products) => {
-  console.log("Testing Flow Job Type");
   const jobTypeCounts = {};
 
   for (const { job_type } of products) {
@@ -262,3 +261,18 @@ const createFilter = (value, templateElement) => {
 
   return newFilter;
 };
+
+// Skeleton Loading Animation
+window.addEventListener("DOMContentLoaded", (event) => {
+  const skeletonElements = document.querySelectorAll("[ms-code-skeleton]");
+
+  skeletonElements.forEach((element) => {
+    // Create a skeleton div
+    const skeletonDiv = document.createElement("div");
+    skeletonDiv.classList.add("skeleton-loader");
+
+    // Add the skeleton div to the current element
+    element.style.position = "relative";
+    element.appendChild(skeletonDiv);
+  });
+});
