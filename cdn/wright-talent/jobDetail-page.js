@@ -1,5 +1,3 @@
-console.log("tes");
-
 const fetchData = async () => {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
@@ -9,11 +7,7 @@ const fetchData = async () => {
     window.location.href = "https://wright-talent.webflow.io/jobs";
   }
 
-  console.log("Testing Flow");
-
   let fetchJob = async () => {
-    console.log("Inside Async");
-
     try {
       const options = {
         method: "GET",
@@ -55,7 +49,6 @@ const fetchData = async () => {
   };
 
   const job = await fetchJob();
-  console.log(job);
 
   document.querySelector('#jobDetail [data-element="job-title"]').textContent =
     job.title;
