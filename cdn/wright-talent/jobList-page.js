@@ -25,6 +25,7 @@ window.fsAttributes.push([
 
     listInstance.addItems(newItems);
 
+    console.log(listInstance);
     // Get the radio template element
     const filtersContractTemplateElement = filtersInstance.form.querySelector(
       '[data-element="filter-contract"]'
@@ -299,15 +300,13 @@ forms.forEach((form) => {
   });
 });
 
+// Apply Job Function
 // Open Modal & Apply Job Function
 const applyBtns = document.querySelectorAll("button[apply-button]");
 const modalWrapper = document.querySelector("#fs-modal-1-popup");
 const modalCloseIcon = document.querySelector(".fs_modal-1_close-2");
-const modalCover = document.querySelector(".fs_modal-1_cover-3");
 
 console.log(applyBtns);
-
-let jobId = "";
 
 applyBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
