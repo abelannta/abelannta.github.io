@@ -180,9 +180,7 @@ var createItem = (job, jobDescription, templateElement) => {
     newItem.querySelectorAll('[data-element="job-icon"]')
   );
 
-  if (urlLink)
-    urlLink.href =
-      "https://wright-talent.webflow.io/main-job-detail?id=" + job.id;
+  if (urlLink) urlLink.href = "https://wrighttalent.net.au/job?id=" + job.id;
   if (title) title.textContent = job.title;
   if (jobType) jobType.textContent = job.job_type.name;
   if (jobCategory)
