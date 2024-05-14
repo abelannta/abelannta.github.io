@@ -1,3 +1,11 @@
+let jobId = "";
+const modalWrapper = document.querySelector("#fs-modal-1-popup");
+const modalCloseIcon = document.querySelector(".fs_modal-1_close-2");
+
+modalCloseIcon.addEventListener("click", () => {
+  modalWrapper.classList.remove("active");
+});
+
 window.fsAttributes = window.fsAttributes || [];
 window.fsAttributes.push([
   "cmsfilter",
@@ -193,6 +201,12 @@ var createItem = (job, jobDescription, templateElement) => {
     });
   }
 
+  // Open Modal Function
+  button.addEventListener("click", () => {
+    jobId = job.id;
+    modalWrapper.classList.add("active");
+  });
+
   return newItem;
 };
 
@@ -301,24 +315,6 @@ forms.forEach((form) => {
 });
 
 // Apply Job Function
-// Open Modal & Apply Job Function
-const applyBtns = document.querySelectorAll("button[apply-button]");
-const modalWrapper = document.querySelector("#fs-modal-1-popup");
-const modalCloseIcon = document.querySelector(".fs_modal-1_close-2");
-
-console.log(applyBtns);
-
-applyBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    jobId = btn.getAttribute("apply-button");
-    modalWrapper.classList.add("active");
-  });
-});
-
-modalCloseIcon.addEventListener("click", () => {
-  modalWrapper.classList.remove("active");
-});
-
 document.addEventListener("DOMContentLoaded", function () {
   const inputElement = document.querySelector(
     'input[type="file"][name="fileToUpload"]'
