@@ -305,6 +305,8 @@ const modalWrapper = document.querySelector("#fs-modal-1-popup");
 const modalCloseIcon = document.querySelector(".fs_modal-1_close-2");
 const modalCover = document.querySelector(".fs_modal-1_cover-3");
 
+console.log(applyBtns);
+
 let jobId = "";
 
 applyBtns.forEach((btn) => {
