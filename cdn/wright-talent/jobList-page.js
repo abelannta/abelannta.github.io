@@ -165,6 +165,7 @@ var createItem = (job, jobDescription, templateElement) => {
   const location = newItem.querySelector('[data-element="location"]');
   const publishedAt = newItem.querySelector('[data-element="publishedAt"]');
   const description = newItem.querySelector('[data-element="job-description"]');
+  const button = newItem.querySelector("[apply-button]");
 
   const iconJob = Array.from(
     newItem.querySelectorAll('[data-element="job-icon"]')
@@ -182,6 +183,7 @@ var createItem = (job, jobDescription, templateElement) => {
   if (publishedAt)
     publishedAt.textContent = moment(job.published_at).format("LL");
   if (description) fetchJob(job.id, description);
+  if (button) button.setAttribute("apply-button", job.id);
   if (iconJob) {
     iconJob.map((icon) => {
       const removeSkeleton = icon.querySelector(".skeleton-loader");
@@ -274,5 +276,118 @@ window.addEventListener("DOMContentLoaded", (event) => {
     // Add the skeleton div to the current element
     element.style.position = "relative";
     element.appendChild(skeletonDiv);
+  });
+});
+
+// Filepond Client
+const forms = document.querySelectorAll('form[ms-code-file-upload="form"]');
+
+forms.forEach((form) => {
+  form.setAttribute("enctype", "multipart/form-data");
+  const uploadInputs = form.querySelectorAll("[ms-code-file-upload-input]");
+
+  uploadInputs.forEach((uploadInput) => {
+    const inputName = uploadInput.getAttribute("ms-code-file-upload-input");
+
+    const fileInput = document.createElement("input");
+    fileInput.setAttribute("type", "file");
+    fileInput.setAttribute("name", inputName);
+    fileInput.setAttribute("id", inputName);
+    fileInput.setAttribute("required", "");
+
+    uploadInput.appendChild(fileInput);
+  });
+});
+
+// Open Modal & Apply Job Function
+const applyBtns = document.querySelectorAll("button[apply-button]");
+const modalWrapper = document.querySelector("#fs-modal-1-popup");
+const modalCloseIcon = document.querySelector(".fs_modal-1_close-2");
+const modalCover = document.querySelector(".fs_modal-1_cover-3");
+
+let jobId = "";
+
+applyBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    jobId = btn.getAttribute("apply-button");
+    modalWrapper.classList.add("active");
+  });
+});
+
+modalCloseIcon.addEventListener("click", () => {
+  modalWrapper.classList.remove("active");
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const inputElement = document.querySelector(
+    'input[type="file"][name="fileToUpload"]'
+  );
+  const pond = FilePond.create(inputElement, {
+    credits: false,
+    name: "fileToUpload",
+    storeAsFile: true,
+  });
+
+  Webflow.push(function () {
+    $("#wf-form-Form-Apply-Job").submit(function (e) {
+      e.preventDefault();
+      if (!pond.getFile().file) return;
+
+      const form = new FormData();
+      form.append("email", document.getElementById("Email").value);
+      form.append("name", document.getElementById("Name").value);
+      form.append("phone", document.getElementById("Phone").value);
+      form.append("linkedin", document.getElementById("LinkedIn").value);
+      form.append("resume", pond.getFile().file);
+
+      const options = {
+        method: "POST",
+        headers: {
+          accept: "application/json",
+          authorization:
+            "Basic 813438d5227b9ea7eb3df82ec03b89a69d5585aa486a6cd52add3bb1081270ebcdd7850721798ac47139770f1d0a910af958cf7e543b2a29c6164c446343f446fca0633d8003239a150f86edd7ca693ba2477c72e725ab5202aafbdedcd4b226c31cdefb9aea7540afbae847a8f0aab6dc6248ff6fe507ebd52bec4fd1dc2c99",
+        },
+      };
+
+      /* Disable Button On Proses Sending */
+      $(".submit-button-apply-job").val("Please Wait...");
+      $(".submit-button-apply-job").css("cursor", "not-allowed");
+      $(".submit-button-apply-job").attr("disabled", "true");
+
+      options.body = form;
+
+      fetch(
+        "https://app.loxo.co/api/wright-talent/jobs/" + jobId + "/apply",
+        options
+      )
+        .then((response) => {
+          // Trigger Click on Close Icon
+          $(".fs_modal-1_close-2").trigger("click");
+          // Trigger Toastify Plugin
+          Toastify({
+            text: "Your apply successfully sent!",
+            duration: 2000,
+            gravity: "top",
+            position: "center",
+            stopOnFocus: true,
+            style: {
+              background: "#527853",
+              fontSize: "15px",
+              fontWeight: 400,
+              color: "#FFFFFF",
+            },
+          }).showToast();
+          pond.removeFile();
+          $("#wf-form-Form-Apply-Job").trigger("reset");
+
+          /* Disable Button On Proses Sending */
+          $(".submit-button-apply-job").val("Submit");
+          $(".submit-button-apply-job").css("cursor", "pointer");
+          $(".submit-button-apply-job").attr("disabled", "false");
+        })
+        .catch((err) => console.error(err));
+
+      return false;
+    });
   });
 });
