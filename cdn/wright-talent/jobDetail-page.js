@@ -66,9 +66,6 @@ const fetchData = async () => {
   document.querySelector(
     '#jobDetail [data-element="job-category"]'
   ).textContent = job.category === null ? "Others" : job.category.name;
-  document.querySelector(
-    '#jobDetail [data-element="job-company"]'
-  ).textContent = job.company === null ? "-" : job.company.name;
   document.querySelector('#jobDetail [data-element="job-type"]').textContent =
     job.job_type.name;
   document.querySelector('#jobDetail [data-element="job-salary"]').textContent =
