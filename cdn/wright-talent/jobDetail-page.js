@@ -52,9 +52,6 @@ const fetchData = async () => {
 
   document.querySelector('#jobDetail [data-element="job-title"]').textContent =
     job.title;
-  document.querySelector(
-    '#jobDetail [data-element="job-address"]'
-  ).textContent = job.address;
   document.querySelector('#jobDetail [data-element="job-city"]').textContent =
     job.city;
   document.querySelector(
