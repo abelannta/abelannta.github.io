@@ -173,12 +173,14 @@ var createItem = (job, jobDescription, templateElement) => {
   const salary = newItem.querySelector('[data-element="salary"]');
   const location = newItem.querySelector('[data-element="location"]');
   const publishedAt = newItem.querySelector('[data-element="publishedAt"]');
+  const description = newItem.querySelector('[data-element="job-description"]');
   const button = newItem.querySelector("[apply-button]");
 
   const iconJob = Array.from(
     newItem.querySelectorAll('[data-element="job-icon"]')
   );
 
+  if (description) fetchJob(job.id, description);
   if (urlLink) urlLink.href = "https://wright-talent.net.au/job?id=" + job.id;
   if (title) title.textContent = job.title;
   if (jobType) jobType.textContent = job.job_type.name;
