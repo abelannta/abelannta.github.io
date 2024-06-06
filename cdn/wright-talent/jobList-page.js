@@ -202,7 +202,6 @@ var createItem = (job, jobDescription, templateElement) => {
   // Open Modal Function
   button.addEventListener("click", () => {
     jobId = job.id;
-    console.log(jobId);
     modalWrapper.classList.add("active");
   });
 
