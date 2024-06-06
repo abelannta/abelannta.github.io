@@ -181,7 +181,7 @@ var createItem = (job, jobDescription, templateElement) => {
   );
 
   if (description) fetchJob(job.id, description);
-  if (urlLink) urlLink.href = "https://wright-talent.net.au/job?id=" + job.id;
+  if (urlLink) urlLink.href = "https://wrighttalent.net.au/job?id=" + job.id;
   if (title) title.textContent = job.title;
   if (jobType) jobType.textContent = job.job_type.name;
   if (jobCategory)
