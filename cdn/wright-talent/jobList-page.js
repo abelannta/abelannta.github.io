@@ -129,11 +129,11 @@ let fetchJobs = async () => {
       headers: {
         accept: "application/json",
         authorization:
-          "Basic 53a31de6d0969a654ad6079ed6e66fd1cb9996a931528b0d02da194fc3fc5e923b52739c6aedc88119143e31f6aa76003f98deb64c5b00ff032ca6afa2752d3603acc25788ee33ed0be8090a96e2050c401a0f1f90bc9cc3904eca26f77b6734cc66604e87c76d5db10ced85fba58db315194e0e45a9baaacef0287690062101",
+          "Basic 813438d5227b9ea7eb3df82ec03b89a69d5585aa486a6cd52add3bb1081270ebcdd7850721798ac47139770f1d0a910af958cf7e543b2a29c6164c446343f446fca0633d8003239a150f86edd7ca693ba2477c72e725ab5202aafbdedcd4b226c31cdefb9aea7540afbae847a8f0aab6dc6248ff6fe507ebd52bec4fd1dc2c99",
       },
     };
     const response = await fetch(
-      "https://app.loxo.co/api/diligent-health/jobs?published_at_sort=desc&status=active&per_page=100",
+      "https://app.loxo.co/api/wright-talent/jobs?published_at_sort=desc&status=active&per_page=100",
       options
     );
     const data = await response.json();
@@ -149,11 +149,11 @@ let fetchJob = (jobId, element) => {
     headers: {
       accept: "application/json",
       authorization:
-        "Basic 53a31de6d0969a654ad6079ed6e66fd1cb9996a931528b0d02da194fc3fc5e923b52739c6aedc88119143e31f6aa76003f98deb64c5b00ff032ca6afa2752d3603acc25788ee33ed0be8090a96e2050c401a0f1f90bc9cc3904eca26f77b6734cc66604e87c76d5db10ced85fba58db315194e0e45a9baaacef0287690062101",
+        "Basic 813438d5227b9ea7eb3df82ec03b89a69d5585aa486a6cd52add3bb1081270ebcdd7850721798ac47139770f1d0a910af958cf7e543b2a29c6164c446343f446fca0633d8003239a150f86edd7ca693ba2477c72e725ab5202aafbdedcd4b226c31cdefb9aea7540afbae847a8f0aab6dc6248ff6fe507ebd52bec4fd1dc2c99",
     },
   };
 
-  fetch("https://app.loxo.co/api/diligent-health/jobs/" + jobId, options)
+  fetch("https://app.loxo.co/api/wright-talent/jobs/" + jobId, options)
     .then((response) => response.json())
     .then((data) => {
       if (element) element.innerHTML = data.description;
@@ -179,7 +179,7 @@ var createItem = (job, jobDescription, templateElement) => {
     newItem.querySelectorAll('[data-element="job-icon"]')
   );
 
-  if (urlLink) urlLink.href = "https://diligent-health.net.au/job?id=" + job.id;
+  if (urlLink) urlLink.href = "https://wright-talent.net.au/job?id=" + job.id;
   if (title) title.textContent = job.title;
   if (jobType) jobType.textContent = job.job_type.name;
   if (jobCategory)
@@ -338,7 +338,7 @@ document.addEventListener("DOMContentLoaded", function () {
         headers: {
           accept: "application/json",
           authorization:
-            "Basic 53a31de6d0969a654ad6079ed6e66fd1cb9996a931528b0d02da194fc3fc5e923b52739c6aedc88119143e31f6aa76003f98deb64c5b00ff032ca6afa2752d3603acc25788ee33ed0be8090a96e2050c401a0f1f90bc9cc3904eca26f77b6734cc66604e87c76d5db10ced85fba58db315194e0e45a9baaacef0287690062101",
+            "Basic 813438d5227b9ea7eb3df82ec03b89a69d5585aa486a6cd52add3bb1081270ebcdd7850721798ac47139770f1d0a910af958cf7e543b2a29c6164c446343f446fca0633d8003239a150f86edd7ca693ba2477c72e725ab5202aafbdedcd4b226c31cdefb9aea7540afbae847a8f0aab6dc6248ff6fe507ebd52bec4fd1dc2c99",
         },
       };
 
@@ -350,7 +350,7 @@ document.addEventListener("DOMContentLoaded", function () {
       options.body = form;
 
       fetch(
-        "https://app.loxo.co/api/diligent-health/jobs/" + jobId + "/apply",
+        "https://app.loxo.co/api/wright-talent/jobs/" + jobId + "/apply",
         options
       )
         .then((response) => {
